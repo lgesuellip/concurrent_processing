@@ -17,7 +17,7 @@ inputs = [
     {"id": 4, "question": "In what year did World War II end?", "synthetic_answer": "1939"},
     {"id": 5, "question": "What is the largest planet in our solar system?", "synthetic_answer": "Jupiter"},
     {"id": 6, "question": "What is the capital of Argentina?", "synthetic_answer": "Buenos Aires"}
-] * 5
+] * 20
 
 prompt_template = Template("""
 <TASK_DESCRIPTION>
@@ -77,9 +77,12 @@ def sync_main():
     logging.info("Finished synchronous processing")
     return results
 
-
+# 30 inputs
 #2024-09-09 13:49:16,135 - INFO - Finished synchronous processing
 #2024-09-09 13:49:16,135 - INFO - Sync execution time: 39.87 seconds
+
+# 120 inputs
+#2024-09-10 10:17:41,559 - INFO - Sync execution time: 151.47 seconds
 
 if __name__ == "__main__":
     logging.info("Script started")
@@ -90,8 +93,8 @@ if __name__ == "__main__":
     sync_time = time.time() - start_time
     
     logging.info(f"Sync execution time: {sync_time:.2f} seconds")
-    logging.info("Sync results:")
-    for i, result in enumerate(results, 1):
-        logging.info(f"Result {i}: {result}")
+    # logging.info("Sync results:")
+    # for i, result in enumerate(results, 1):
+    #     logging.info(f"Result {i}: {result}")
 
     logging.info("Script finished")

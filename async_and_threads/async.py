@@ -25,7 +25,7 @@ inputs = [
     {"id": 4, "question": "In what year did World War II end?", "synthetic_answer": "1939"},
     {"id": 5, "question": "What is the largest planet in our solar system?", "synthetic_answer": "Jupiter"},
     {"id": 6, "question": "What is the capital of Argentina?", "synthetic_answer": "Buenos Aires"}
-] * 20
+] * 5
 
 prompt_template = Template("""
 <TASK_DESCRIPTION>
@@ -128,7 +128,10 @@ async def async_main_with_semaphore(max_concurrent=10):
 #2024-09-09 15:07:54,761 - INFO - Async with semaphore execution time: 6.68 seconds
 
 # 120 inputs
-#2024-09-09 15:22:19,819 - WARNING - Async with semaphore execution time: 3.45 seconds
+#2024-09-10 10:17:41,559 - INFO - Sync execution time: 151.47 seconds
+#2024-09-10 10:13:35,122 - INFO - Future/Thread execution time: 13.12 seconds
+#2024-09-10 10:45:46,011 - INFO - Async with semaphore execution time: 3.29 seconds
+
 
 if __name__ == "__main__":
     logging.info("Script started")

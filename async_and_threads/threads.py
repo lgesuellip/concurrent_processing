@@ -24,7 +24,7 @@ inputs = [
     {"id": 4, "question": "In what year did World War II end?", "synthetic_answer": "1939"},
     {"id": 5, "question": "What is the largest planet in our solar system?", "synthetic_answer": "Jupiter"},
     {"id": 6, "question": "What is the capital of Argentina?", "synthetic_answer": "Buenos Aires"}
-] * 2
+] * 5
 
 prompt_template = Template("""
 <TASK_DESCRIPTION>
@@ -91,13 +91,16 @@ def future_main():
 
 
 # 30 inputs
-#2024-09-09 13:49:16,135 - INFO - Finished synchronous processing
-#2024-09-09 13:49:16,135 - INFO - Sync execution time: 39.87 seconds
-
-#2024-09-09 15:44:02,707 - INFO - Future/Thread execution time: 2.88 seconds
+# 2024-09-09 13:49:16,135 - INFO - Finished synchronous processing
+# 2024-09-09 13:49:16,135 - INFO - Sync execution time: 39.87 seconds
+# 2024-09-09 15:44:02,707 - INFO - Future/Thread execution time: 2.88 seconds
+# 2024-09-09 15:07:48,083 - INFO - Async execution time: 1.55 seconds
 
 # 120 inputs
-#2024-09-09 15:45:11,462 - WARNING - Future/Thread execution time: 1.17 seconds
+#2024-09-10 10:17:41,559 - INFO - Sync execution time: 151.47 seconds
+#2024-09-10 10:13:35,122 - INFO - Future/Thread execution time: 13.12 seconds
+#2024-09-10 10:45:46,011 - INFO - Async with semaphore execution time: 3.29 seconds
+
 
 if __name__ == "__main__":
     logging.info("Script started")
